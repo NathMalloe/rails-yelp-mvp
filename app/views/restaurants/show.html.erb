@@ -1,0 +1,11 @@
+<%= @restaurant.name %>
+
+<%= simple_form_for([@restaurant, @review]) do |r| %>
+  <%= r.input :rating %>
+  <%= r.input :content %>
+  <%= r.submit %>
+<% end %>
+
+<% @restaurant.reviews.each do |review| %>
+<li><%= review.content %></li>
+<% end %>

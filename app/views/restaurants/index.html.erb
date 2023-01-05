@@ -1,2 +1,4 @@
-<h1>test</h1>
-<%= @restaurant %>
+<h1>Liste des restaurants</h1>
+<% @restaurants.each do |r| %>
+<%= link_to r.name, restaurant_path(r) %> <br>
+<% end %>
